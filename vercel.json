@@ -1,12 +1,12 @@
 {
-    "routes": [
+    "rewrites": [
+        { "source": "/", "destination": "https://generativelanguage.googleapis.com" },
         {
-            "src": "/v1/(.*)",
-            "dest": "https://generativelanguage.googleapis.com/v1/$1"
-        },
-        {
-            "src": "/v1beta/(.*)",
-            "dest": "https://generativelanguage.googleapis.com/v1beta/$1"
+            "source": "/:match*",
+            "destination": "https://generativelanguage.googleapis.com/:match*"
         }
-    ]
+    ],
+    "github": {
+        "silent": true
+    }
 }
